@@ -9,8 +9,8 @@
     window.onload = function() {
       // x = new markov(text, type, regex);
       markovSpain = new markov("The rain in spain falls mainly on the plain", "string", /./g);
-      markovSherlock = new markov(corpus, "string", /[.^\w]+ /g); //sherlock holmes corpus
-      
+        markovSherlock = new markov(corpus, "string", /[.^\w]+ /g); //sherlock holmes corpus
+
       var mSp = "";
       var mSh = "";
       var outString = "";
@@ -18,13 +18,13 @@
         mSp += "<p>" + markovSpain.gen(10) + "</p>";
         mSh += "<p>" + markovSherlock.gen(20) + "</p>";
       }
-    
+
       outString += "<h1>Markov Demo</h1>";
       outString += "<h3>'The rain in spain falls mainly on the plain' becomes:</h3>";
       outString += mSp;
       outString += "<h3>Some of Sherlock Holmes becomes:</h3>";
       outString += mSh;
-      
+
       document.write(outString);
     }
   </script>
